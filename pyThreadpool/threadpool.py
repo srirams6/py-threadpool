@@ -24,7 +24,7 @@ class threadpool:
             t = worker_thread(self._job_q, self._result_q)
             self.is_active = True
             self._threads.append(t)
-            t.start()
+            t.run()
         return True
 
     def add_job(self, job):
